@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AppheaderComponent implements OnInit {
   @Input() user;
-title="Bring2End";
+title="Bring to End";
 public loggoutSuccess : boolean = false;
 public loggoutFail : boolean = false;
 
