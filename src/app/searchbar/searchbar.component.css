@@ -1,0 +1,25 @@
+.searchBox{
+    margin:5px;
+    border:1px solid blue;
+}
+
+.searchbutton ,.backbutton{
+    margin:5px; 
+    float:right;
+}
+
+.topicbar {
+    border:2px solid black;
+}
+
+h3 {
+    color:green;
+    margin:5px;
+}
+
+img{
+    width:40px;
+    height:40px;
+    float:right;
+    margin:5px;
+}

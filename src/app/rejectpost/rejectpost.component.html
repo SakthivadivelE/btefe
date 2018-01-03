@@ -1,0 +1,22 @@
+<div [ngClass]="'row title'">
+  <h4>Reject Issue</h4>
+  <div *ngIf="postRejected" [ngClass]="'alert alert-success col-sm-11'" [ngStyle]="{'margin-left':'10px'}">
+      Post Rejected
+   </div>
+</div>
+
+<div [ngClass]="'row contentArea'"> 
+
+ <div [ngClass]="'col-sm-12'">
+    <b>Reason to reject</b>
+    <textarea [(ngModel)]="reasontoReject" rows="10"  [ngClass]="'description '" >
+       
+    </textarea>
+   
+    <input  type="button" value="Reject" [ngClass]="'btn btn-danger'" (click)="onRejectClick()">
+    <input type="button" value="Cancel" [ngClass]="'btn btn-success'" (click)="onCancelClick()">
+ </div>
+
+
+ 
+</div>

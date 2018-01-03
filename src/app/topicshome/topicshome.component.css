@@ -1,0 +1,36 @@
+.row{
+    min-height:80vh;
+    border:2px solid black;
+ 
+}
+
+.topics {
+   border:1px solid green;
+    margin:10px 10px 10px 10px;
+   min-height:20vh;
+   min-width:30vh;
+   position:relative;
+   background-color: rgb(76, 175, 80);
+}
+
+.text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) ;
+    color:white;
+    cursor:pointer;
+}
+
+.totalPosts{
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-70%, -50%) ;
+    color:white;
+}
+
+.totalTopics {
+    margin-left:auto;
+    margin-right:auto;
+}

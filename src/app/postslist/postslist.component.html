@@ -1,0 +1,49 @@
+
+<app-searchbar [topicData]="topicData"></app-searchbar>
+<div [ngClass]="'row '">
+  <div [ngClass]="'col-sm-3 filterLatest'" (click)="getlatestPosts()" [style.background-color]="tabColorLatest">
+    <h5>Latest</h5>
+  </div>
+  
+  <div [ngClass]="'col-sm-9 filterMostAnswered'" (click)="onMostAnsweredClick()" [style.background-color]="tabColorMost">
+    <h5>Most Answered</h5>
+  </div>
+  
+  </div>
+
+  <div [ngClass]="'row content'">
+      <div [ngClass]="'col-sm-10'">
+      <div [ngClass]="'row'" *ngFor="let post of posts">
+    <div [ngClass]="'col-sm-3 answers'">
+        <img src="/assets/profile-icon.png" alt="image">
+      {{post.total_answers}}<br>
+     
+      Answers
+     
+  </div>
+    <div [ngClass]="'col-sm-9 title'" (click)="onPostClick(post)">
+        <b [ngStyle]="{'color':'black'}">{{post.title}}</b><br>
+       {{post.description | truncate }}<br>
+   <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
+    </div>
+
+  
+  </div>
+  
+    </div>
+
+    <div [ngClass]="'col-sm-2 history'">
+
+    </div>
+  </div>
+
+  <div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-3 viewmore'">
+      <h5 (click)="onViewMoreClick()">View more</h5>
+    </div>
+    
+    <div [ngClass]="'col-sm-9 newIssue'">
+      <h5 (click)="onAddnewissueClick()">Add new issue</h5>
+    </div>
+ 
+    </div>

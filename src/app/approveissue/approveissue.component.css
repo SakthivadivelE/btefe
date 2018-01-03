@@ -1,0 +1,34 @@
+
+.titlebar{
+    border:2px solid black;
+}
+
+.issuedescription {
+    border-left:2px solid black;
+    border-right:2px solid black;
+    width:100%;
+}
+
+.description {
+    width:100%;
+    color:blue;
+    border:2px solid green;
+    margin-top:10px;
+}
+
+.postTitle {
+    border-left:2px solid black;
+    border-right:2px solid black;
+    color:blue;
+}
+
+.postDescription{
+     border-left:2px solid black;
+    border-right:2px solid black;
+   
+}
+
+.buttons {
+    margin-top:5px;
+    margin-bottom:5px;
+}

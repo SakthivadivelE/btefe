@@ -1,0 +1,111 @@
+<app-title></app-title>
+<div [ngClass]="'row'">
+  <div [ngClass]="'col-sm-4 signInUp'">
+      <div [ngClass]="'childDiv cursor'" routerLink="/login">
+      Signin
+      </div><div [ngClass]="'childDiv signUp'">
+       Signup
+      </div>
+ </div>
+</div>
+
+<div [ngClass]="'row'">
+  <div [ngClass]="'col-sm-4 registerform'">
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)" novalidate>
+      <div [ngClass]="'form-group'">
+         <label>Firstname</label><br>
+          <input type="text" [ngClass]="'form-control'" name="firstname" #firstnameRef="ngModel" required minlength=3 ngModel>
+      </div>
+
+      <div *ngIf="firstnameRef.errors && (firstnameRef.dirty || firstnameRef.touched)"  [ngClass]="'alert alert-danger'">
+        
+          <div [hidden]="!firstnameRef.errors.required">
+            Please enter Firstname
+          </div>
+      
+          <div [hidden]="!firstnameRef.errors.minlength">
+              Please Enter atleast 3 characters
+            </div>
+          </div>
+
+      <div [ngClass]="'form-group'">
+          <label>Lastname</label><br>
+          <input type="text" [ngClass]="'form-control'" name="lastname" ngModel>
+      </div>
+
+    <div [hidden]="!duplicateUsername" [ngClass]="'alert alert-danger'">
+        Username alredy exists 
+    </div>
+
+      <div [ngClass]="'form-group'">
+        <label>Email ID</label><br>
+        <div [ngClass]="'row'">
+            <div [ngClass]="'col-sm-4'"><input type="email" [ngClass]="'form-control emailBox'" name="email" #emailRef="ngModel" required ngModel></div>
+            <div [ngClass]="'col-sm-4 emailDefault'">@knowledgeq.com</div>
+        </div>
+        
+       
+     </div>
+     <div [hidden]="emailRef.valid || emailRef.pristine" [ngClass]="'alert alert-danger'">
+         Invalid email ID
+     </div>
+
+     <div [hidden]="!duplicateEmail" [ngClass]="'alert alert-danger'">
+        Email ID alredy exists 
+    </div>
+
+     <div [ngClass]="'form-group'">
+      <label>Emp ID</label><br>
+       <input type="text" [ngClass]="'form-control'" name="empID" #empRef="ngModel" required  minlength=3 ngModel>
+   </div>
+
+   <div *ngIf="empRef.errors && (empRef.dirty || empRef.touched)"  [ngClass]="'alert alert-danger'">
+    
+      <div [hidden]="!empRef.errors.required">
+        Please enter Employee ID
+      </div>
+  
+      <div [hidden]="!empRef.errors.minlength">
+          Please Enter atleast 3 characters
+        </div>
+      </div>
+
+   <div [hidden]="!duplicateEmpID" [ngClass]="'alert alert-danger'">
+    Employee ID alredy exists 
+   </div>
+
+      <div [ngClass]="'form-group'">
+        <label>Password</label><br>
+        <input type="password" [ngClass]="'form-control'" name="password" #passwordRef="ngModel" minlength=8 required ngModel>
+    </div>
+
+      <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)"  [ngClass]="'alert alert-danger'">
+        
+          <div [hidden]="!passwordRef.errors.required">
+            Please enter password
+          </div>
+      
+          <div [hidden]="!passwordRef.errors.minlength">
+              Please Enter atleast 8 characters
+            </div>
+          </div>
+
+      <div [ngClass]="'form-group'">
+        <label>Area of Interest</label><span><select name="interest" #topicRef="ngModel" [(ngModel)]="selectedTopic">
+        <option *ngFor="let topic of topics" [value]="topic.topic_id"  >
+            {{topic.title}}
+        </option>
+    </select></span>
+    </div>
+
+    <div [ngClass]="'form-group'">
+      <label>Receive Notifications</label><input type="checkbox"  name="notify" ngModel [ngStyle]="{'margin-left':'25px'}">
+   </div>
+
+      <div [ngClass]="'submitButton'">
+      <input type="submit" [disabled]="!registerForm.valid" value="Submit" [ngClass]="'btn btn-success'">
+      </div>
+
+  </form>
+</div>
+</div>

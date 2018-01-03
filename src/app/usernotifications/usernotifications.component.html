@@ -1,0 +1,42 @@
+
+<div [ngClass]="'row'">
+  <div [ngClass]="'col-sm-12 titlebar'">
+    <h5>New posts available on your interested Area</h5>
+  </div>
+
+  
+
+  </div>
+
+  <div [ngClass]="'row content'">
+      <div [ngClass]="'col-sm-10'">
+      <div [ngClass]="'row'" *ngFor="let post of posts">
+    <div [ngClass]="'col-sm-3 answers'">
+        <img src="/assets/profile-icon.png" alt="image">
+      {{post.total_answers}}<br>
+     
+      Answers
+     
+  </div>
+    <div [ngClass]="'col-sm-9 title'" (click)="onPostClick(post)">
+        <b [ngStyle]="{'color':'black'}">{{post.title}}</b><br>
+       {{post.description | truncate }}<br>
+   <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
+    </div>
+
+  
+  </div>
+  
+    </div>
+
+    <div [ngClass]="'col-sm-2 history'">
+
+    </div>
+  </div>
+
+  <div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-12 viewmore'">
+      <h5 (click)="onViewMoreClick()">View more</h5>
+    </div>
+ 
+    </div>

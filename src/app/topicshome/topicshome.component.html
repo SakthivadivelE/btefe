@@ -1,0 +1,10 @@
+<div [ngClass]="'totalTopics'"></div>
+<div [ngClass]="'row '">
+
+  <div *ngFor="let topic of topics" [ngClass]="'col-sm-2 topics'">
+      <a [routerLink]="['postlist']" [queryParams]="{topic_id: topic.topic_id,title:topic.title}">
+   <div [ngClass]="'text'">{{topic.title}}</div>
+   <div [ngClass]="'totalPosts'">{{topic.total_posts}}</div>
+  </a>
+</div>
+</div>

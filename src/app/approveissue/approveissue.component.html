@@ -1,0 +1,39 @@
+<div [ngClass]="'row titlebar'">
+  <h4>Approve Issue </h4>
+</div>
+
+<div [ngClass]="'row '">
+  <div [ngClass]="'col-sm-12 postTitle'">
+    <h5>{{postData.title}}</h5>
+  </div>
+</div>
+
+<div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-12 postDescription'">
+        <b>Description</b> 
+      <textarea rows="10" readonly [ngClass]="'description '">
+      {{postData.description}}
+   </textarea>
+    </div>
+  </div>
+
+  <div [ngClass]="'row'">
+      <div [ngClass]="'col-sm-12 postDescription'">
+       <b>Solution</b> 
+        <textarea rows="9" readonly [ngClass]="'description '">
+        {{postData.solution}}
+     </textarea>
+      </div>
+
+      <div *ngIf="postApproved" [ngClass]="'alert alert-success col-sm-11'" [ngStyle]="{'margin-left':'10px'}">
+          Post approved successfully
+       </div>
+       
+    </div>
+
+    <div [ngClass]="'row postDescription'">
+        <div [ngClass]="'col-sm-12 buttons'">
+       <input type="button" value="Accept" [ngClass]="'btn btn-success'" (click)="onAcceptClick()">
+       <input type="button" value="Reject" [ngClass]="'btn btn-danger'" (click)="onRejectClick()">
+        </div>
+      </div>

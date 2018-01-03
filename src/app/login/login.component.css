@@ -1,0 +1,69 @@
+input.ng-valid{
+    border-left: 2px solid green;
+}
+
+input.ng-invalid{
+    border-left: 2px solid red;
+}
+
+.loginform {
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid #3366FF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding:10px;
+}
+
+.submitButton {
+    text-align: center;
+}
+
+.form-group span {
+    float:right;
+    color:blue;
+}
+
+
+.signInUp{
+    background-color: #54AAFF;
+    margin-left: auto;
+    margin-right: auto;
+    border-top:1px solid #3366FF;
+    border-left:1px solid #3366FF;
+    border-right:1px solid #3366FF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height:50px;
+    padding:0;
+}
+
+.signinalert{
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+}
+
+.childDiv{
+    display:inline-block;
+    width:50%;
+    height:50px;
+    text-align: center;
+    padding:10px;
+ }
+ .signIn{
+    border-right:1px solid black;
+    color:white;
+ }
+ 
+.childDiv:hover{
+  color:orangered; 
+ }
+
+
+ 
+
+
+ 
+
+

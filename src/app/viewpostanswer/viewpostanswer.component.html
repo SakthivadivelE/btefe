@@ -1,0 +1,86 @@
+<div [ngClass]="'row titlebar'">
+  <h4>{{postData.title}} </h4>
+</div>
+
+<div [ngClass]="'row'">
+    <div [ngClass]="'issuedescription'">
+  <label><b>Issue Description</b></label>
+</div>
+   <textarea rows="4" readonly [ngClass]="'description'">
+      {{postData.description}}
+   </textarea>
+</div>
+
+<div [ngClass]="'row previousanswers'">
+    <div [ngClass]="'col-sm-12 title'">
+    <label><b>Answers</b></label>
+    </div>
+  </div>
+
+  <div [ngClass]="'row previousanswers'">
+      <div [ngClass]="'col-sm-12'">
+      <div [ngClass]="'row answersnew'" *ngFor="let answer of postAnswers">
+    <div [ngClass]="'col-sm-3 answers'">
+      
+        <div [ngClass]="'row'">
+            <div [ngClass]="'col-sm-12'">
+        <img src="/assets/profile-icon.png" alt="image" [ngClass]="'imgProfile'">
+      </div>
+    </div>
+      <div [ngClass]="'row'">
+          <div [ngClass]="'col-sm-12'">
+        <img src="/assets/star_empty.png" alt="image" [ngClass]="'starEmpty'">
+        <img src="/assets/star_empty.png" alt="image" [ngClass]="'starEmpty'">
+        <img src="/assets/star_empty.png" alt="image" [ngClass]="'starEmpty'">
+        <img src="/assets/star_empty.png" alt="image" [ngClass]="'starEmpty'">
+        <img src="/assets/star_empty.png" alt="image" [ngClass]="'starEmpty'">
+       
+  </div>
+</div>
+
+<div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-12'">
+<input type="button" value="Rate" [ngClass]="'btn btn-success ratebutton'">
+</div>
+</div>
+</div>
+    <div [ngClass]="'col-sm-9 title'">
+        <textarea rows="4" readonly [ngClass]="'answer'">
+            {{answer.description}}
+         </textarea>
+    </div>
+
+  
+  </div>
+  
+    </div>
+
+  </div>
+
+
+<div [ngClass]="'row youranswergroup'">
+  <div [ngClass]="'col-sm-12'">
+      <label><b>Your Answer</b></label>
+  <form #answerForm="ngForm" (ngSubmit)="onAnswerSubmit(answerForm.value)" novalidate>
+  
+      <div [ngClass]="'form-group'">
+   <textarea rows="5" [ngClass]="'form-control'" name="answer" #answerRef="ngModel" required [(ngModel)]="answerValue">
+    
+   </textarea>
+      </div>
+
+   <input type="submit" [disabled]="!answerForm.valid" value="Add" [ngClass]="'btn btn-success answerbutton'">
+   </form>
+
+   <div *ngIf="answerAdded" [ngClass]="'alert alert-success '">
+    Answer added to the post successfully...
+  </div>
+
+   </div>
+
+
+
+
+</div>
+
+

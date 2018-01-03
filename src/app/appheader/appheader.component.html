@@ -1,0 +1,53 @@
+<div [ngClass]="'row userProfile'">
+<div [ngClass]="'col-sm-8 appTitle'">
+  <h4>{{title}}</h4>
+</div>
+<div [ngClass]="'col-sm-2 username'">
+    <h6>{{user.username}}</h6>
+</div>
+
+  <div [ngClass]="'col-sm-2'">
+      <!-- <img src="/assets/profile-icon.png" alt="image"> -->
+      <div class="dropdown" dropdown *ngIf="user.isAdmin == 0">
+          <img src="/assets/profile-icon.png" alt="image">
+        <a href dropdownToggle (click)="false" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> </a>
+        <ul *dropdownMenu class="dropdown-menu">
+            <li role="menuitem">Edit profile</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onUserNotificationsClick()">Notifications</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem">View Posts</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onSignout()">Signout</li>
+        </ul>
+      </div>
+
+      <div class="dropdown" dropdown *ngIf="user.isAdmin == 1">
+          <img src="/assets/profile-icon.png" alt="image">
+        <a href dropdownToggle (click)="false" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> </a>
+        <ul *dropdownMenu class="dropdown-menu">
+            <li role="menuitem">Edit profile</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onAdminNotificationsClick()">Notifications</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem">Manage Users</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem">Manage Posts</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onSignout()">Signout</li>
+        </ul>
+      </div>
+    
+    </div>
+  </div>
+
+
+  <div [ngClass]="'row alertMessageGroup'">
+  <div [ngClass]="'col-sm-11 alert alert-success alertMessage'" *ngIf="loggoutSuccess">
+      You have logged out successfully...
+  </div>
+
+  <div [ngClass]="'col-sm-11 alert alert-danger alertMessage'" *ngIf="logoutFail">
+     Logout failed...
+  </div>
+</div>

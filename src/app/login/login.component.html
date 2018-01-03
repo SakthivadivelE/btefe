@@ -1,0 +1,50 @@
+<app-title></app-title>
+<div [ngClass]="'row'">
+<div [ngClass]="'col-sm-4 signinalert'">
+<div [hidden]="!registered" [ngClass]="'alert alert-success'">
+    You have registered successfully. Please login and confirm your username and password
+</div>
+</div>
+</div>
+
+<div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-4 signInUp'">
+        <div [ngClass]="'childDiv signIn'">
+        Signin
+        </div><div [ngClass]="'childDiv cursor'" routerLink="/signup">
+         Signup
+        </div>
+   </div>
+  </div>
+  
+<div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-4 loginform'">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" novalidate>
+        <div [ngClass]="'form-group'">
+            <label>Username</label><br>
+            <input type="text" [ngClass]="'form-control'" name="username" #usernameRef="ngModel" required ngModel>
+        </div>
+        <div [hidden]="usernameRef.valid || usernameRef.pristine" [ngClass]="'alert alert-danger'">
+            Please enter username
+        </div>
+
+        <div [ngClass]="'form-group'">
+            <label>Password</label><span routerLink='/forgotpassword' [ngClass]="'cursor'">Forgot Password?</span><br>
+            <input type="password" [ngClass]="'form-control'" name="password" #passwordRef="ngModel" required ngModel>
+        </div>
+
+        <div [hidden]="passwordRef.valid || passwordRef.pristine" [ngClass]="'alert alert-danger'">
+            Please enter password
+        </div>
+
+        <div [hidden]="!wrongUsernamePassword || passwordRef.invalid" [ngClass]="'alert alert-danger'">
+            Incorrect username or password
+        </div>
+
+        <div [ngClass]="'submitButton'">
+        <input type="submit" [disabled]="!loginForm.valid" value="Submit" [ngClass]="'btn btn-success'">
+        </div>
+
+    </form>
+</div>
+</div>

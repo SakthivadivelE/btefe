@@ -1,0 +1,42 @@
+.content{
+    border-left:2px solid black;
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+    min-height:80vh;
+}
+
+.history{
+    border-left:2px solid black;
+ 
+    border-bottom:2px solid black;
+    min-height:80vh;
+}
+
+.decription{
+    min-height:20vh;
+    word-wrap: break-word;
+}
+
+.submitButton {
+    text-align: right;
+    float:right;
+    margin:5px;
+}
+
+.yesbutton{
+   position:absolute;
+   left:30px;
+   bottom:10px;
+}
+
+.changebutton{
+   
+   position:absolute;
+   right:30px;
+   bottom:10px;
+}
+
+.popupgroup {
+    border:1px solid green;
+    position:relative;
+}

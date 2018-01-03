@@ -1,0 +1,62 @@
+<app-searchbar [topicData]="topicData"></app-searchbar>
+
+<div [ngClass]="'row'">
+    <popup  #popup1 >
+     
+        <input type="button" [ngClass]="'btn btn-info yesbutton'" value="Yes" (click)="onYesButtonClick()">
+        <input type="button" [ngClass]="'btn btn-danger changebutton'"  value="Change" (click)="onChangeButtonClick()">
+     
+      </popup>
+</div>
+<div [ngClass]="'row content'"> 
+   <div [ngClass]="'col-sm-10'">
+    <form #newIssueForm="ngForm" (ngSubmit)="onNewIssueSubmit(newIssueForm.value)" novalidate>
+      <div [ngClass]="'form-group'">
+          <label><b>New Issue</b></label><br>
+          <input type="text" [ngClass]="'form-control'" name="heading" placeholder="Heading" #headingRef="ngModel" required ngModel>
+      </div>
+      <div [hidden]="headingRef.valid || headingRef.pristine" [ngClass]="'alert alert-danger'">
+          Please enter issue heading
+      </div>
+
+      <div [ngClass]="'form-group'">
+          <label><b>Description</b></label><br>
+          <textarea [ngClass]="'form-control'" rows="7" name="description" #descRef="ngModel" required ngModel></textarea>
+      </div>
+
+      <div [hidden]="descRef.valid || descRef.pristine" [ngClass]="'alert alert-danger'">
+          Please add description of the issue
+      </div>
+
+      <div [ngClass]="'form-group'">
+        <label><b>Solution</b></label><br>
+        <textarea [ngClass]="'form-control'" rows="6" name="solution" ngModel></textarea>
+    </div>
+
+    <div [ngClass]="'form-group'">
+      <label *ngIf="changeTopic">Choose topic&nbsp;&nbsp;</label><span *ngIf="changeTopic"><select name="topic" #topicRef="ngModel" [(ngModel)]="selectedTopic">
+      <option *ngFor="let topic of topics" [value]="topic.topic_id"  >
+          {{topic.title}}
+      </option>
+  </select></span><span [ngClass]="'submitButton'">
+    <input type="submit" [disabled]="!newIssueForm.valid" value="Post" [ngClass]="'btn btn-success'"></span>
+  </div>
+
+  </form>
+
+  <div *ngIf="postCreated" [ngClass]="'alert alert-success'">
+      Post submitted successfully and waiting for admin approvals
+  </div>
+
+  <div *ngIf="duplicateTitle" [ngClass]="'alert alert-danger'">
+    Post creation failed please change the title and try...
+</div>
+
+ </div>
+
+<div [ngClass]="'col-sm-2 history'">
+   
+</div> 
+
+
+</div>

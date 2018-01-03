@@ -1,0 +1,39 @@
+img{
+    width:40px;
+    height:40px;
+    /* float:right; */
+    margin:0;
+    border:2px solid brown;
+}
+
+.userProfile {
+   border-top:2px solid black;
+   border-left:2px solid black;
+   border-right:2px solid black;
+   background-color: rgb(33, 150, 243);
+}
+.appTitle{
+   margin-top:5px;
+}
+
+.username{
+    padding-top:10px;
+    float:right;
+    color:white;
+}
+
+.dropdown-menu{
+    background-color: lightgreen;
+    padding-left:2px;
+}
+
+.alertMessage {
+    margin:10px;
+}
+
+.alertMessageGroup {
+    border-left:2px solid black;
+    border-right:2px solid black;
+}
+
+

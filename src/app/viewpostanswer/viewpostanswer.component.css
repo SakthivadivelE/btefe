@@ -1,0 +1,91 @@
+.description {
+    width:100%;
+    color:blue;
+    border:2px solid black;
+}
+
+.answer{
+    color:blue;
+    border:2px solid black;
+    width:100%;
+}
+
+.titlebar{
+    border:2px solid black;
+}
+
+.issuedescription {
+    border-left:2px solid black;
+    border-right:2px solid black;
+    width:100%;
+}
+
+.previousanswers {
+    border-left:2px solid black;
+    border-right:2px solid black;
+    /* width:100%; */
+    padding-left:5px;
+}
+
+.youranswer {
+   
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+    color:green;
+    border:2px solid black;
+}
+
+.youranswergroup{
+    min-height:63vh;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    
+}
+
+.answerbutton{
+    margin:10px;
+}
+
+
+
+
+img{
+    width:15px;
+    height:15px;
+    float:right;
+    margin:2px;
+    margin-top:10px;
+    opacity: 0.5;
+}
+
+
+.imgProfile{
+    width:40px;
+    height:40px;
+    float:right;
+    /* margin-left:30%; */
+  
+    margin-top:10px;
+    border:2px solid grey;
+}
+
+.answers {
+    border-left:2px solid black;
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+    border-top:2px solid black;
+    padding:10px;
+   
+}
+
+.ratebutton {
+    float:right;
+    margin-top:5px;
+}
+
+
+.answersnew{
+    margin-top:10px;
+}
+
