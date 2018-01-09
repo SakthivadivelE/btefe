@@ -1,9 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-
 body {
     position:relative;
+    background-color: #0F2741!important;
 }
-
 .cursor{
     cursor:pointer;
+ }
+
+ label{
+     color:white;
+ }
+
+ b{
+     color:white;
  }

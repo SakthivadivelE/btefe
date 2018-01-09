@@ -1,5 +1,12 @@
 <div [ngClass]="'row titlebar'">
+    <div [ngClass]="'col-sm-11 '">
   <h4>{{postData.title}} </h4>
+</div>
+
+  <div [ngClass]="'col-sm-1 '">
+    <img src="/assets/back.png" (click)="backButtonClicked()" alt="image" [ngClass]="'imgProfile'" [ngStyle]="{'margin':'5px','border':'none','opacity':'1'}">
+  </div>
+
 </div>
 
 <div [ngClass]="'row'">
@@ -17,6 +24,15 @@
     </div>
   </div>
 
+  <div [ngClass]="'row previousanswers'" *ngIf="postData.solution !=='undefined' && postData.solution !==''" >
+  <div [ngClass]="'col-sm-12 title'">
+      <label><b>Suggestion</b></label>
+      <textarea rows="4" readonly [ngClass]="'answer'">
+          {{postData.solution}}
+       </textarea>
+  </div>
+</div>
+  
   <div [ngClass]="'row previousanswers'">
       <div [ngClass]="'col-sm-12'">
       <div [ngClass]="'row answersnew'" *ngFor="let answer of postAnswers">

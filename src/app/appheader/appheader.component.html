@@ -1,6 +1,6 @@
 <div [ngClass]="'row userProfile'">
 <div [ngClass]="'col-sm-8 appTitle'">
-  <h4>{{title}}</h4>
+        <h4><span [ngStyle]="{'color':'#26185F'}">Bring</span><span [ngStyle]="{'color':'red'}">2</span><span [ngStyle]="{'color':'#26185F'}">End</span></h4>
 </div>
 <div [ngClass]="'col-sm-2 username'">
     <h6>{{user.username}}</h6>
@@ -12,11 +12,13 @@
           <img src="/assets/profile-icon.png" alt="image">
         <a href dropdownToggle (click)="false" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> </a>
         <ul *dropdownMenu class="dropdown-menu">
-            <li role="menuitem">Edit profile</li>
+            <li role="menuitem" (click)="onEditprofileClick(user)">Edit profile</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onChangePassword()">Change Password</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
             <li role="menuitem" (click)="onUserNotificationsClick()">Notifications</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
-            <li role="menuitem">View Posts</li>
+            <li role="menuitem" (click)="viewPosts()">View Posts</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
             <li role="menuitem" (click)="onSignout()">Signout</li>
         </ul>
@@ -26,13 +28,17 @@
           <img src="/assets/profile-icon.png" alt="image">
         <a href dropdownToggle (click)="false" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> </a>
         <ul *dropdownMenu class="dropdown-menu">
-            <li role="menuitem">Edit profile</li>
+            <li role="menuitem" (click)="onEditprofileClick(user)">Edit profile</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onChangePassword()">Change Password</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
             <li role="menuitem" (click)="onAdminNotificationsClick()">Notifications</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
-            <li role="menuitem">Manage Users</li>
+            <li role="menuitem" (click)="viewPosts()">View own posts</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
-            <li role="menuitem">Manage Posts</li>
+            <li role="menuitem" (click)="onManageUsersClick()">Manage Users</li>
+            <li [ngClass]="'divider dropdown-divider'"></li>
+            <li role="menuitem" (click)="onManagePostsClick(user)">Manage Posts</li>
             <li [ngClass]="'divider dropdown-divider'"></li>
             <li role="menuitem" (click)="onSignout()">Signout</li>
         </ul>

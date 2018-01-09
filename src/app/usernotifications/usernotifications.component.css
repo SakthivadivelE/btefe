@@ -1,22 +1,22 @@
 .viewmore{
-    border-left:2px solid black;
-    border-right:2px solid black;
-    color:blue;
+    border-left:2px solid white;
+    border-right:2px solid white;
+    color:white;
     padding:5px;
 }
 
 
 .content{
-    border-left:2px solid black;
-    border-right:2px solid black;
-    border-bottom:2px solid black;
+    border-left:2px solid white;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
     min-height:69vh;
 }
 
 .history{
-    border-left:2px solid black;
+    border-left:2px solid white;
  
-    border-bottom:2px solid black;
+    border-bottom:2px solid white;
     min-height:69vh;
 }
 
@@ -29,23 +29,26 @@ b{
 }
  
 .answers {
-    border-left:2px solid black;
-    border-right:2px solid black;
-    border-bottom:2px solid black;
+    border-left:2px solid white;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
     padding:10px;
+    color:white;
 }
 
 .title {
-    /* border-right:2px solid black; */
-    border-bottom:2px solid black;
+    /* border-right:2px solid white; */
+    border-bottom:2px solid white;
+    color:white;
 }
 
 
 .titlebar {
-    border-right:2px solid black;
-    border-left:2px solid black;
-    border-bottom:1px solid black;
+    border-right:2px solid white;
+    border-left:2px solid white;
+    border-bottom:1px solid white;
     padding:5px;
+    color:white;
 }
 
 img{

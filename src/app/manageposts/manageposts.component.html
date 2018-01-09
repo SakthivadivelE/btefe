@@ -1,0 +1,96 @@
+<div [ngClass]="'row topicbar'">
+  <div [ngClass]="'col-sm-3'">
+    <h5>{{topicData.topic_title}}</h5>
+  </div>
+  
+  <div [ngClass]="'col-sm-5 '">
+    <input type="text" [ngClass]="'form-control searchBox'" name="searchstring" placeholder="Please enter the word to search" [(ngModel)]="searchText">
+  </div>
+  
+  <div [ngClass]="'col-sm-3 '">
+      <input type="button" [ngClass]="'btn btn-primary searchbutton'" name="searchbutton" value="Search" (click)="onsearchButtonClick()">
+    </div>
+
+    <div [ngClass]="'col-sm-1 '">
+      <img src="/assets/back.png" (click)="backButtonClicked()" alt="image" [ngStyle]="{'margin':'5px','border':'none'}">
+    </div>
+  
+  </div>
+
+<div [ngClass]="'row'" [ngStyle]="{'border':'2px solid black'}">
+  <div [ngClass]="'col-sm-5 count'">
+    <h5 [ngStyle]="{'color':'black'}">Total posts : {{totalActivePosts}}</h5>
+  </div>
+  
+  <div [ngClass]="'col-sm-5 count'" >
+    <h5 [ngStyle]="{'color':'black'}">Rejected : {{totalRejectedPosts}}</h5>
+  </div>
+  
+  </div>
+
+<div [ngClass]="'row '">
+  <div [ngClass]="'col-sm-3 filterActive'" (click)="getActivePosts()" [style.background-color]="tabColorActive">
+    <h5 [ngStyle]="{'color':'black'}">Active</h5>
+  </div>
+  
+  <div [ngClass]="'col-sm-9 filterRejected'" (click)="onRejectedClick()" [style.background-color]="tabColorRejected">
+    <h5 [ngStyle]="{'color':'black'}">Rejected</h5>
+  </div>
+  
+  </div>
+
+  <div [ngClass]="'row content'">
+      <div [ngClass]="'col-sm-12'" *ngIf="tabColorActive =='grey'">
+      <div [ngClass]="'row'" *ngFor="let post of posts">
+    <div [ngClass]="'col-sm-3 answers'">
+        <img src="/assets/profile-icon.png" alt="image">
+      {{post.total_answers}}<br>
+     
+      Answers
+     
+  </div>
+    <div [ngClass]="'col-sm-9 title'" >
+        <b [ngStyle]="{'color':'white'}" (click)="onPostClick(post)">{{post.title}}</b><br>
+       <p (click)="onPostClick(post)">{{post.description | truncate }}</p>
+   <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
+   <input type="button" [ngClass]="'btn btn-warning deletebutton'" name="deletebutton" value="Delete" (click)="onDeletePostClick(post)">
+    </div>
+
+  
+  </div>
+  
+    </div>
+
+    <div [ngClass]="'col-sm-12'" *ngIf="tabColorActive =='lightgrey'">
+      <div [ngClass]="'row'" *ngFor="let post of posts">
+    <div [ngClass]="'col-sm-3 answers'">
+        <img src="/assets/profile-icon.png" alt="image">
+  </div>
+    <div [ngClass]="'col-sm-9 title'" >
+        <b [ngStyle]="{'color':'white'}">{{post.title}}</b><br>
+      
+   <b>Reason : </b>{{post.rejectReason}}
+   
+    </div>
+
+  
+  </div>
+  
+    </div>
+
+    <!-- <div [ngClass]="'col-sm-2 history'">
+
+    </div> -->
+  </div>
+
+  <div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-3 viewmore'">
+      <h5 (click)="onViewMoreClick()">View more</h5>
+    </div>
+    
+    <div [ngClass]="'col-sm-9 newIssue'">
+      <h5 (click)="onAddnewissueClick()">Add new issue</h5>
+    </div>
+ 
+    </div>
+

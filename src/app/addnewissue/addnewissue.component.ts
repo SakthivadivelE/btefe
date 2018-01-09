@@ -50,7 +50,7 @@ public topicData:any;
         this.popup1.options = {
           header: "Are you sure to post into this topic?",
           color: "green", 
-          widthProsentage: 40,  
+          widthProsentage: 30,  
           animationDuration: 0.5, 
           showButtons: false, 
           confirmBtnContent: "Yes",  
@@ -103,4 +103,8 @@ public topicData:any;
         this.closePopup();
         this.changeTopic=true;
       }
+
+      backButtonClicked() {
+        this.location.back();
+    }
 }

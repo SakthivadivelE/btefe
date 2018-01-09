@@ -1,12 +1,16 @@
 
 <div [ngClass]="'row'">
-  <div [ngClass]="'col-sm-9 titlebar'">
+  <div [ngClass]="'col-sm-8 titlebar'" [ngStyle]="{'padding-top':'5px','border-left':'5px solid black'}">
     <h5>New posts are waiting for your approvals</h5>
   </div>
 
   <div [ngClass]="'col-sm-3 titlebar '">
     <input type="button" [ngClass]="'btn btn-danger approveLaterButton'" value="Approve Later" (click)="onApproveLaterClick()">
    </div>
+
+   <div [ngClass]="'col-sm-1 titlebar '">
+      <img src="/assets/back.png" (click)="backButtonClicked()" alt="image" [ngStyle]="{'margin-top':'0','border':'none'}">
+     </div>
   </div>
 
   <div [ngClass]="'row content'">
@@ -16,8 +20,8 @@
         <img src="/assets/profile-icon.png" alt="image">
   </div>
     <div [ngClass]="'col-sm-11 title'" (click)="onPostClick(post)">
-        <b [ngStyle]="{'color':'black'}">{{post.title}}</b><br>
-       {{post.description | truncate }}<br>
+        <b [ngStyle]="{'color':'white'}">{{post.title}}</b><br>
+        <b [ngStyle]="{'color':'white'}"> {{post.description | truncate }}</b><br>
    <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
     </div>
 

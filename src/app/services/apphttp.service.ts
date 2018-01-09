@@ -27,6 +27,14 @@ public isLoggedIn:boolean=false;
       );
   }
 
+  getIsLoggedIn() {
+    return this.isLoggedIn;
+  }
+
+  setIsLoggedin(value:boolean) {
+    this.isLoggedIn = value;
+  }
+
   createAuthorizationHeader() {
     return new HttpHeaders().set("Authorization",  'Bearer ' + localStorage.getItem('token'));
 }
@@ -42,15 +50,39 @@ public isLoggedIn:boolean=false;
        );
    }
 
+   changePassword(data:any):Observable<any> {
+    var data:any=JSON.stringify(data);
+    var  headers = this.createAuthorizationHeader();
+   
+    return this.http.get<any>(`${serverUrl}/changePassword?data=${data}`,{headers})
+      .pipe(
+        tap(()=>{
+          console.error("");
+        }),
+        catchError(this.handleError('changePassword', []))
+      );
+  }
+
    logout() {
      localStorage.removeItem('token');
      localStorage.removeItem('user_id');
+     localStorage.removeItem('username');
+     localStorage.removeItem('email');
+     localStorage.removeItem('interest');
+     localStorage.removeItem('isAdmin');
+     localStorage.removeItem('notify');
+     localStorage.removeItem('empID');
      this.isLoggedIn = false;
    }
 
   userRegistration(data:any) :Observable<any> {
     var json = JSON.stringify(data);
     return this.http.post<any>(`${serverUrl}/userRegistration`,{data:json},{observe: 'response'});
+  }
+
+  editProfile(data:any) :Observable<any> {
+    var json = JSON.stringify(data);
+    return this.http.get<any>(`${serverUrl}/editProfile?data=${json}&token=${localStorage.getItem('token')}`,{observe: 'response'});
   }
   
   private handleError<T> (operation = 'operation', result?: T) {
@@ -62,12 +94,13 @@ public isLoggedIn:boolean=false;
   }
 
   private setSession(authResult) {
+    this.isLoggedIn = true;
     localStorage.setItem('token', authResult.token);
     if(typeof authResult.user !== undefined && typeof authResult.user !== "undefined") {
       localStorage.setItem('user_id', authResult.user[0].user_id);
     }
     
-    this.isLoggedIn = true;
+   
 }  
 
 getThing() {

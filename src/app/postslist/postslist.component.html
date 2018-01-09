@@ -1,5 +1,23 @@
 
-<app-searchbar [topicData]="topicData"></app-searchbar>
+<div [ngClass]="'row topicbar'">
+  <div [ngClass]="'col-sm-3'">
+    <h3>{{topicData.topic_title}}</h3>
+  </div>
+  
+  <div [ngClass]="'col-sm-5 '">
+    <input type="text" [ngClass]="'form-control searchBox'" name="searchstring" placeholder="Please enter the word to search" [(ngModel)]="searchText">
+  </div>
+  
+  <div [ngClass]="'col-sm-3 '">
+      <input type="button" [ngClass]="'btn btn-primary searchbutton'" name="searchbutton" value="Search" (click)="onsearchButtonClick()">
+    </div>
+
+    <div [ngClass]="'col-sm-1 '">
+      <img src="/assets/back.png" (click)="backButtonClicked()" alt="image" [ngStyle]="{'margin':'5px','border':'none'}">
+    </div>
+  
+  </div>
+  
 <div [ngClass]="'row '">
   <div [ngClass]="'col-sm-3 filterLatest'" (click)="getlatestPosts()" [style.background-color]="tabColorLatest">
     <h5>Latest</h5>
@@ -22,7 +40,7 @@
      
   </div>
     <div [ngClass]="'col-sm-9 title'" (click)="onPostClick(post)">
-        <b [ngStyle]="{'color':'black'}">{{post.title}}</b><br>
+        <b [ngStyle]="{'color':'green'}">{{post.title}}</b><br>
        {{post.description | truncate }}<br>
    <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
     </div>

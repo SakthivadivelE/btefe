@@ -34,8 +34,9 @@ this.activatedRoute.params.subscribe(params => {
      
     switch(this.userdata.error) {
       case null:
+      this.apphttpService.setIsLoggedin(true);
       this.dataService.setUserData(this.userdata.user[0]);
-       this.router.navigate(['/content', { user_id: this.userdata.user[0].user_id, user_name: this.userdata.user[0].username,isAdmin:this.userdata.user[0].isAdmin  }]);
+       this.router.navigate(['/content', { user_id: this.userdata.user[0].user_id, user_name: this.userdata.user[0].username,isAdmin:this.userdata.user[0].isAdmin , notify:this.userdata.user[0].notify,email:this.userdata.user[0].email,interest:this.userdata.user[0].interest ,empID:this.userdata.user[0].empID }]);
        this.wrongUsernamePassword = false;
        this.serverError=false;
        break;

@@ -1,0 +1,117 @@
+
+.filterActive {
+    border-right:2px solid wheat;
+    border-left:2px solid wheat;
+    border-bottom:1px solid black;
+    /* background-color: grey; */
+    padding:5px;
+    /* color:white; */
+}
+
+
+.count{
+    background-color: orange;
+    margin:5px auto 5px auto;
+    text-align: center;
+    height:10vh;
+    padding-top:3vh;
+}
+
+.filterRejected {
+    border-right:2px solid wheat;
+    border-bottom:1px solid black;
+    /* background-color: lightgrey; */
+    padding:5px;
+    /* color:black; */
+}
+
+.viewmore{
+    border-left:2px solid wheat;
+    color:white;
+    padding:5px;
+}
+
+.newIssue {
+    border-right:2px solid wheat;
+    color:blueviolet;
+    padding:5px;
+}
+
+.content{
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
+    min-height:53vh;
+    color:white;
+}
+
+.history{
+    border-left:2px solid wheat;
+ 
+    border-bottom:2px solid wheat;
+    min-height:53vh;
+}
+
+.postsList{
+    border-left:2px solid wheat;
+    border-bottom:2px solid wheat;
+    padding:10px;
+    margin:0;
+}
+.lastUpdated{
+    float:right;
+}
+b{
+    color:red;
+}
+ 
+.answers {
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
+    padding:10px;
+}
+
+.title {
+    /* border-right:2px solid wheat; */
+    border-bottom:2px solid wheat;
+}
+
+img{
+    width:40px;
+    height:40px;
+    float:right;
+    margin-top:10px;
+    border:2px solid white;
+}
+
+.deletebutton {
+    margin:5px; 
+    float:right;
+}
+
+.searchBox{
+    margin:5px;
+    border:1px solid blue;
+}
+
+.searchbutton ,.backbutton{
+    margin:5px; 
+    float:right;
+}
+
+.topicbar {
+    border:2px solid wheat;
+}
+
+h5 {
+    color:white;
+    margin:5px;
+}
+
+/* img{
+    width:40px;
+    height:40px;
+    float:right;
+    margin:5px;
+} */

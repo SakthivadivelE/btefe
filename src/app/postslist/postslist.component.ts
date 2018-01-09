@@ -3,6 +3,7 @@ import { DataService } from '../services/data.service';
 import { ActivatedRoute ,Router} from '@angular/router';
 import 'rxjs/add/operator/filter';
 import { TruncatePipe } from '../pipes/truncate.pipe';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-postslist',
@@ -17,7 +18,8 @@ public posts:any=[];
 public topicData:any;
 public tabColorLatest:any='grey';
 public tabColorMost:any='lightgrey';
-  constructor(private dataService:DataService,private activatedRoute:ActivatedRoute, private router:Router) { }
+public searchText:string;
+  constructor(private location:Location,private dataService:DataService,private activatedRoute:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {
 
@@ -98,8 +100,25 @@ public tabColorMost:any='lightgrey';
   }
 
   onPostClick(postData:any) {
-    console.error(postData);
     this.router.navigate(['/content/postAnswer', { post_id: postData.post_id,description:postData.description,title:postData.title,solution:postData.solution}]);
+  }
+
+  backButtonClicked() {
+      this.location.back();
+  }
+
+  onsearchButtonClick() {
+    var keywordsArray =this.searchText.trim().split(' ');
+    keywordsArray=keywordsArray.filter(function(n){ return n != "" });
+    
+    var data = {
+      keywords:keywordsArray
+    }
+
+    this.dataService.searchPosts(data)
+    .subscribe(data=>{
+      this.posts = data;
+    });
   }
 
 }

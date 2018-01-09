@@ -1,15 +1,13 @@
 .content{
-    border-left:2px solid black;
-    border-right:2px solid black;
-    border-bottom:2px solid black;
-    min-height:80vh;
+    border:2px solid wheat;
+    min-height:88vh;
 }
 
 .history{
-    border-left:2px solid black;
+    border-left:2px solid wheat;
  
-    border-bottom:2px solid black;
-    min-height:80vh;
+    border-bottom:2px solid wheat;
+    min-height:88vh;
 }
 
 .decription{
@@ -39,4 +37,31 @@
 .popupgroup {
     border:1px solid green;
     position:relative;
+}
+
+.searchBox{
+    margin:5px;
+    border:1px solid blue;
+}
+
+.searchbutton ,.backbutton{
+    margin:5px; 
+    float:right;
+}
+
+.topicbar {
+    border:2px solid wheat;
+}
+
+h3 {
+    color:green;
+    margin:5px;
+}
+
+
+img{
+    width:40px;
+    height:40px;
+    float:right;
+    margin:5px;
 }

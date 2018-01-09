@@ -1,12 +1,12 @@
 .title {
-    border-left:2px solid black;
-    border-right:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
     padding-left:5px;
 }
 
 .contentArea {
     height:84vh;
-    border:2px solid black;
+    border:2px solid wheat;
 }
 
 .description {

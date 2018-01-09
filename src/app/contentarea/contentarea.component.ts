@@ -15,8 +15,14 @@ export class ContentareaComponent implements OnInit {
     this.userData = {
       username : this.activatedRoute.snapshot.paramMap.get('user_name'),
       isAdmin : this.activatedRoute.snapshot.paramMap.get('isAdmin'),
-      userID : this.activatedRoute.snapshot.paramMap.get('user_id')
+      userID : this.activatedRoute.snapshot.paramMap.get('user_id'),
+      empID:this.activatedRoute.snapshot.paramMap.get('empID'),
+      notify:this.activatedRoute.snapshot.paramMap.get('notify'),
+      email:this.activatedRoute.snapshot.paramMap.get('email'),
+      interest:this.activatedRoute.snapshot.paramMap.get('interest'),
     }
   }
+
+ 
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../services/data.service';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -14,7 +15,7 @@ public answerAdded:boolean=false;
 public answerValue:any="";
 
 public postData:any;
-  constructor(private activatedRoute:ActivatedRoute, private dataService:DataService) { }
+  constructor(private location:Location,private activatedRoute:ActivatedRoute, private dataService:DataService) { }
 
   ngOnInit() {
 
@@ -29,7 +30,6 @@ public postData:any;
     this.dataService.getPostAnswers({post_id:this.postData.post_id})
     .subscribe(data=>{
      this.postAnswers=data;
-     console.error(this.postAnswers);
     });
   }
 
@@ -48,6 +48,10 @@ public postData:any;
     this.answerValue = '';
    },2000);
   });
+  }
+
+  backButtonClicked() {
+    this.location.back();
   }
 
 }

@@ -1,11 +1,13 @@
 
 .titlebar{
-    border:2px solid black;
+    border:2px solid wheat;
+    border-top:2px solid black;
+    color:white;
 }
 
 .issuedescription {
-    border-left:2px solid black;
-    border-right:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
     width:100%;
 }
 
@@ -17,14 +19,14 @@
 }
 
 .postTitle {
-    border-left:2px solid black;
-    border-right:2px solid black;
-    color:blue;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    color:white;
 }
 
 .postDescription{
-     border-left:2px solid black;
-    border-right:2px solid black;
+     border-left:2px solid wheat;
+    border-right:2px solid wheat;
    
 }
 

@@ -1,0 +1,59 @@
+<div [ngClass]="'row topicbar'">
+  <div [ngClass]="'col-sm-11'">
+    <h3>{{userData.title}}</h3>
+  </div>
+  
+    <div [ngClass]="'col-sm-1 '">
+      <img src="/assets/back.png" (click)="backButtonClicked()" alt="image" [ngStyle]="{'margin-top':'-2px','border':'0'}">
+    </div>
+  
+  </div>
+
+
+
+<div [ngClass]="'row '">
+  <div [ngClass]="'col-sm-3 filterAll'" (click)="getAllPosts()" [style.background-color]="tabColorAll">
+    <h5>All</h5>
+  </div>
+  
+  <div [ngClass]="'col-sm-3 filterAnswered'" (click)="onAnsweredClick()" [style.background-color]="tabColorAnswered">
+    <h5>Answered</h5>
+  </div>
+
+  <div [ngClass]="'col-sm-6 filterAsked'" (click)="onAskedClick()" [style.background-color]="tabColorAsked">
+    <h5>Asked</h5>
+  </div>
+  
+  </div>
+
+  <div [ngClass]="'row content'">
+      <div [ngClass]="'col-sm-10'">
+      <div [ngClass]="'row'" *ngFor="let post of posts">
+    <div [ngClass]="'col-sm-3 answers'">
+        <img src="/assets/profile-icon.png" alt="image">
+      {{post.total_answers}}<br>
+     
+      Answers
+     
+  </div>
+    <div [ngClass]="'col-sm-9 title'" (click)="onPostClick(post)">
+        <b [ngStyle]="{'color':'green'}">{{post.title}}</b><br>
+        <b [ngStyle]="{'color':'white'}">{{post.description | truncate }}</b><br>
+   <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
+    </div>
+
+  
+  </div>
+  
+    </div>
+
+    <div [ngClass]="'col-sm-2 history'">
+
+    </div>
+  </div>
+
+  <div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-12 viewmore'">
+      <h5 (click)="onViewMoreClick()">View more</h5>
+    </div>
+    </div>

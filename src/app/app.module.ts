@@ -37,6 +37,15 @@ import { AdminnotificationsComponent } from './adminnotifications/adminnotificat
 import { ApproveissueComponent } from './approveissue/approveissue.component';
 import { RejectpostComponent } from './rejectpost/rejectpost.component';
 import { ManageusersComponent } from './manageusers/manageusers.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { AddnewuserComponent } from './addnewuser/addnewuser.component';
+import { AdminuserviewComponent } from './adminuserview/adminuserview.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
+import { ManagepostsComponent } from './manageposts/manageposts.component';
+
+import { LoginrouteguardService } from './services/loginrouteguard.service';
+import { LoggedinrouteguardService } from './services/loggedinrouteguard.service';
+import { AdminroleguardService } from './services/adminroleguard.service';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -69,7 +78,12 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     AdminnotificationsComponent,
     ApproveissueComponent,
     RejectpostComponent,
-    ManageusersComponent
+    ManageusersComponent,
+    ChangepasswordComponent,
+    AddnewuserComponent,
+    AdminuserviewComponent,
+    EditprofileComponent,
+    ManagepostsComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +105,10 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     TestService,
     DataService,
     ApphttpService,
-    Location
+    Location,
+    LoginrouteguardService,
+    LoggedinrouteguardService,
+    AdminroleguardService
     
   ],
   bootstrap: [AppComponent],

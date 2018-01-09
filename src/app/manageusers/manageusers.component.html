@@ -1,3 +1,51 @@
-<p>
-  manageusers works!
-</p>
+<div [ngClass]="'row topicbar'">
+    <div [ngClass]="'col-sm-4'">
+      <h3>Manage Users</h3>
+    </div>
+    
+    <div [ngClass]="'col-sm-4 '">
+      <input type="text" [ngClass]="'form-control searchBox'" name="searchstring" placeholder="Please enter word to search" [(ngModel)]="searchText">
+    </div>
+    
+    <div [ngClass]="'col-sm-3 '">
+        <input type="button" [ngClass]="'btn btn-primary searchbutton'" name="searchbutton" value="Search" (click)="onSearchButtonClick()">
+      </div>
+
+      <div [ngClass]="'col-sm-1 '">
+        <img src="/assets/back.png" (click)="backButtonClicked()" alt="image">
+      </div>
+    
+    </div>
+
+    <div [ngClass]="'row'">
+        <popup  #popup1 >
+         
+            <input type="button" [ngClass]="'btn btn-info yesbutton'" value="Yes" (click)="onYesButtonClick()">
+            <input type="button" [ngClass]="'btn btn-danger changebutton'"  value="Cancel" (click)="onCancelButtonClick()">
+         
+          </popup>
+    </div>
+
+
+    <div [ngClass]="'row'">
+        <div [ngClass]="'col-sm-12 totalusers'">
+         <h5>Total users : {{totalUsers}}</h5>
+        </div>
+      </div>
+  <div [ngClass]="'row content'">
+     
+        <div [ngClass]="'col-sm-6 users'" *ngFor="let user of users">
+           <div>
+            <img (click)="onUserClick(user)" src="/assets/profile-icon.png" alt="image" [ngStyle]="{'width':'65px','height':'65px','border':'1px solid white'}">
+           </div>
+
+         <div (click)="onUserClick(user)"><b>{{user.username}}</b></div>
+         <div><button type="button" [ngClass]="'btn btn-warning'" [ngStyle]="{'margin-top':'5px'}" (click)="onRemoveUserClick(user)">Remove</button></div>
+       </div>
+  </div>
+
+  <div [ngClass]="'row'">
+    <div [ngClass]="'col-sm-12 adduser'">
+        <button type="button" [ngClass]="'btn btn-success'" [ngStyle]="{'float':'right'}" (click)="onAddUserClick()">Add User</button>
+    </div>
+  </div>

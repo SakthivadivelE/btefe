@@ -1,6 +1,6 @@
 .content{
     height:90%vh;
-    border:1px solid black;
+    border:1px solid wheat;
 }
 
 .container-fluid {
@@ -9,5 +9,5 @@
 
 .row{
     min-height:80vh;
-    border:1px solid black;
+    border:1px solid wheat;
 }

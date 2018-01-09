@@ -1,6 +1,6 @@
 <app-title></app-title>
 <div [ngClass]="'row'">
-  <div [ngClass]="'col-sm-4 signInUp'">
+  <div [ngClass]="'col-sm-3 signInUp'">
       <div [ngClass]="'childDiv cursor'" routerLink="/login">
       Signin
       </div><div [ngClass]="'childDiv signUp'">
@@ -10,7 +10,7 @@
 </div>
 
 <div [ngClass]="'row'">
-  <div [ngClass]="'col-sm-4 registerform'">
+  <div [ngClass]="'col-sm-3 registerform'">
   <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)" novalidate>
       <div [ngClass]="'form-group'">
          <label>Firstname</label><br>
@@ -40,8 +40,8 @@
       <div [ngClass]="'form-group'">
         <label>Email ID</label><br>
         <div [ngClass]="'row'">
-            <div [ngClass]="'col-sm-4'"><input type="email" [ngClass]="'form-control emailBox'" name="email" #emailRef="ngModel" required ngModel></div>
-            <div [ngClass]="'col-sm-4 emailDefault'">@knowledgeq.com</div>
+            <div [ngClass]="'col-sm-3'"><input type="email" [ngClass]="'form-control emailBox'" name="email" #emailRef="ngModel" required ngModel></div>
+            <div [ngClass]="'col-sm-3 emailDefault'">@knowledgeq.com</div>
         </div>
         
        

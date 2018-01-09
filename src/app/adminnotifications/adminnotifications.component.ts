@@ -53,4 +53,8 @@ export class AdminnotificationsComponent implements OnInit {
     this.router.navigate(['/content/approveIssue', { post_id:data.post_id ,title:data.title , description:data.description,solution:data.solution,topic_id:data.topic_id}]);
   }
 
+  backButtonClicked() {
+    this.location.back();
+  }
+
 }

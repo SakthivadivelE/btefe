@@ -1,16 +1,17 @@
 .row{
     min-height:80vh;
-    border:2px solid black;
+    border:1px solid white;
  
 }
 
 .topics {
-   border:1px solid green;
+   border:1px solid white;
     margin:10px 10px 10px 10px;
    min-height:20vh;
    min-width:30vh;
    position:relative;
-   background-color: rgb(76, 175, 80);
+   border-radius: 10px;
+   background-color: #B71135;
 }
 
 .text{

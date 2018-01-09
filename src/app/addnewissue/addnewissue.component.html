@@ -1,4 +1,21 @@
-<app-searchbar [topicData]="topicData"></app-searchbar>
+<div [ngClass]="'row topicbar'">
+    <div [ngClass]="'col-sm-3'">
+      <h3>{{topicData.topic_title}}</h3>
+    </div>
+    
+    <div [ngClass]="'col-sm-5 '">
+      <input type="text" [ngClass]="'form-control searchBox'" name="searchstring" placeholder="Please enter the word to search" readonly>
+    </div>
+    
+    <div [ngClass]="'col-sm-3 '">
+        <input type="button" [ngClass]="'btn btn-primary searchbutton'" name="searchbutton" value="Search" disabled>
+      </div>
+  
+      <div [ngClass]="'col-sm-1 '">
+        <img src="/assets/back.png" (click)="backButtonClicked()" alt="image" [ngStyle]="{'margin':'5px','border':'none'}">
+      </div>
+    
+    </div>
 
 <div [ngClass]="'row'">
     <popup  #popup1 >

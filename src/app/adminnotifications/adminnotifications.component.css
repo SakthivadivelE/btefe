@@ -1,23 +1,23 @@
 .viewmore{
-    border-left:2px solid black;
-    border-right:2px solid black;
-    color:blue;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    color:white;
     padding:5px;
 }
 
 
 .content{
-    border-left:2px solid black;
-    border-right:2px solid black;
-    border-bottom:2px solid black;
-    min-height:69vh;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
+    min-height:76vh;
 }
 
 .history{
-    border-left:2px solid black;
+    border-left:2px solid wheat;
  
-    border-bottom:2px solid black;
-    min-height:69vh;
+    border-bottom:2px solid wheat;
+    min-height:76vh;
 }
 
 
@@ -29,23 +29,25 @@ b{
 }
  
 .answers {
-    border-left:2px solid black;
-    border-right:2px solid black;
-    border-bottom:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
     padding:10px;
 }
 
 .title {
-    /* border-right:2px solid black; */
-    border-bottom:2px solid black;
+    /* border-right:2px solid wheat; */
+    border-bottom:2px solid wheat;
 }
 
 
 .titlebar {
-    border-right:2px solid black;
-    border-left:2px solid black;
-    border-bottom:1px solid black;
+    border-right:2px solid wheat;
+    border-top:2px solid wheat;
+    border-bottom:1px solid wheat;
     padding-left:5px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
 
 img{
@@ -53,10 +55,15 @@ img{
     height:40px;
     float:right;
     margin-top:10px;
-    border:2px solid brown;
+    border:2px solid white;
 }
 
 .approveLaterButton {
     float:right;
     margin:1px;
+}
+
+
+h5{
+    color:white;
 }

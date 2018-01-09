@@ -19,7 +19,7 @@
      
   </div>
     <div [ngClass]="'col-sm-9 title'" (click)="onPostClick(post)">
-        <b [ngStyle]="{'color':'black'}">{{post.title}}</b><br>
+        <b [ngStyle]="{'color':'white'}">{{post.title}}</b><br>
        {{post.description | truncate }}<br>
    <b>Last updated : {{post.last_updated | amTimeAgo}}</b>
     </div>

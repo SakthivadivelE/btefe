@@ -1,28 +1,29 @@
 .description {
     width:100%;
     color:blue;
-    border:2px solid black;
+    border:2px solid wheat;
 }
 
 .answer{
     color:blue;
-    border:2px solid black;
+    border:2px solid wheat;
     width:100%;
 }
 
 .titlebar{
-    border:2px solid black;
+    border:2px solid wheat;
+    color:white;
 }
 
 .issuedescription {
-    border-left:2px solid black;
-    border-right:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
     width:100%;
 }
 
 .previousanswers {
-    border-left:2px solid black;
-    border-right:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
     /* width:100%; */
     padding-left:5px;
 }
@@ -33,13 +34,13 @@
     margin-right:auto;
     margin-bottom:10px;
     color:green;
-    border:2px solid black;
+    border:2px solid wheat;
 }
 
 .youranswergroup{
     min-height:63vh;
-    border-left:2px solid black;
-    border-right:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
     
 }
 
@@ -67,14 +68,14 @@ img{
     /* margin-left:30%; */
   
     margin-top:10px;
-    border:2px solid grey;
+    border:2px solid white;
 }
 
 .answers {
-    border-left:2px solid black;
-    border-right:2px solid black;
-    border-bottom:2px solid black;
-    border-top:2px solid black;
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
+    border-top:2px solid wheat;
     padding:10px;
    
 }
@@ -89,3 +90,7 @@ img{
     margin-top:10px;
 }
 
+
+h4{
+    color:white;
+}

@@ -1,0 +1,85 @@
+
+.filterAll {
+    border-right:2px solid wheat;
+    border-left:2px solid wheat;
+    border-bottom:1px solid wheat;
+    /* background-color: grey; */
+    padding:5px;
+    /* color:white; */
+}
+
+
+.filterAnswered,.filterAsked {
+    border-right:2px solid wheat;
+    border-bottom:1px solid wheat;
+    /* background-color: lightgrey; */
+    padding:5px;
+    /* color:black; */
+}
+
+.viewmore{
+    border-left:2px solid wheat;
+    color:white;
+    padding:5px;
+}
+
+.newIssue {
+    border-right:2px solid wheat;
+    color:blueviolet;
+    padding:5px;
+}
+
+.content{
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
+    min-height:69vh;
+}
+
+.history{
+    border-left:2px solid wheat;
+ 
+    border-bottom:2px solid wheat;
+    min-height:69vh;
+}
+
+.postsList{
+    border-left:2px solid wheat;
+    border-bottom:2px solid wheat;
+    padding:10px;
+    margin:0;
+}
+.lastUpdated{
+    float:right;
+}
+b{
+    color:red;
+}
+ 
+.answers {
+    border-left:2px solid wheat;
+    border-right:2px solid wheat;
+    border-bottom:2px solid wheat;
+    padding:10px;
+    color:white;
+}
+
+.title {
+    /* border-right:2px solid wheat; */
+    border-bottom:2px solid wheat;
+}
+
+img{
+    width:40px;
+    height:40px;
+    float:right;
+    margin-top:10px;
+    border:2px solid white;
+}
+
+.topicbar {
+    border:2px solid wheat;
+    padding-top:5px;
+    color:green;
+}
+

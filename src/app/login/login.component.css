@@ -4,12 +4,13 @@ input.ng-valid{
 
 input.ng-invalid{
     border-left: 2px solid red;
+    background: #D0D1D3;
 }
 
 .loginform {
+    border:1px solid white;
     margin-left: auto;
     margin-right: auto;
-    border:1px solid #3366FF;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding:10px;
@@ -21,17 +22,17 @@ input.ng-invalid{
 
 .form-group span {
     float:right;
-    color:blue;
+    color:#ff6c00;
 }
 
 
 .signInUp{
-    background-color: #54AAFF;
+    background-color: #B71135;
     margin-left: auto;
     margin-right: auto;
-    border-top:1px solid #3366FF;
-    border-left:1px solid #3366FF;
-    border-right:1px solid #3366FF;
+    border-top:1px solid white;
+    border-left:1px solid white;
+    border-right:1px solid white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height:50px;
@@ -50,6 +51,7 @@ input.ng-invalid{
     height:50px;
     text-align: center;
     padding:10px;
+    color:white;
  }
  .signIn{
     border-right:1px solid black;
@@ -60,10 +62,8 @@ input.ng-invalid{
   color:orangered; 
  }
 
-
+ label
+ {
+     color: white;
+ }
  
-
-
- 
-
-
